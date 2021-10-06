@@ -1,0 +1,4 @@
+rootProject.name = "LxFind"
+include ':app'
+include ':export_find'
+include ':module_find'
