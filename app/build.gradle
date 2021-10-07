@@ -35,5 +35,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //引入本地Common组件、module_cart、module_hd，在app module中独立调试使用
+    implementation 'com.github.hufeiyang:Common:1.0.0'
+
     implementation project(path: ':module_find')
 }

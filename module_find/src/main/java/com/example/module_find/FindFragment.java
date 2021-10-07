@@ -4,27 +4,28 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
-
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.hfy.export_cart.router.CartRouterTable;
+import com.example.export_find.router.FindRouterTable;
 
-
-@Route(path = CartRouterTable.PATH_FRAGMENT_CART)
-public class CartFragment extends Fragment {
+@Route(path = FindRouterTable.PATH_FRAGMENT_CART)
+public class FindFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     private String mParam1;
     private String mParam2;
 
-    public CartFragment() {
+    private Button mBtnJumpDetailFind;
+
+    public FindFragment() {
         // Required empty public constructor
     }
 
-    public static CartFragment newInstance(String param1, String param2) {
-        CartFragment fragment = new CartFragment();
+    public static FindFragment newInstance(String param1, String param2) {
+        FindFragment fragment = new FindFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -45,6 +46,15 @@ public class CartFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false);
+        View view= inflater.inflate(R.layout.fragment_find, container, false);
+
+        mBtnJumpDetailFind=view.findViewById(R.id.mBtnJumpDetailFind);
+        mBtnJumpDetailFind.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FindDetailActivity.jump(getActivity());
+            }
+        });
+        return view;
     }
 }

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.module_find">
     <application>
-        <activity android:name=".CartActivity"></activity>
+        <activity android:name=".FindActivity"></activity>
+        <activity android:name=".FindDetailActivity"/>
     </application>
 </manifest>

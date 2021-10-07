@@ -5,10 +5,12 @@ package com.example.export_find.bean;
  *
  * @author hufeiyang
  */
-public class CartInfo {
+public class FindInfo {
 
     /**
      * 商品数量
      */
-    public int productCount;
+    public int productCount=10000;
+
+
 }

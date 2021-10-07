@@ -48,6 +48,7 @@ dependencies {
     annotationProcessor 'com.github.hufeiyang.Android-AppLifecycleMgr:applifecycle-compiler:1.0.4'
 
     //依赖export_find
-    implementation 'com.github.hufeiyang.Cart:export_cart:1.0.8'
+    //implementation 'com.github.hufeiyang.Cart:export_cart:1.0.8'
+    implementation project(path:':LxFind:export_find')
 
 }
